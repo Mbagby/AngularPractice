@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>Angular 2 Exercise 2</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<select ng-model="model.id" convert-to-number>
+  <option value="Dogs">Dogs</option>
+  <option value="Cats">Cats</option>
+  <option value="Dogs and Cats">Dogs and Cats</option>
+  <option value="Neither">Neither</option>
+</select>
+<h3>I love {{model.id}}</h3>
+</body>
+</html>
+

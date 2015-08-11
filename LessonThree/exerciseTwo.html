@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>Angular 3 Exercise 2</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+How many digest of pi do you want?
+<select ng-model="piValue" >
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+</select>
+<h3>Here you go! The first {{piValue}} digits  of pi!</h3>
+{{3.14159265359 | number: piValue}}
+
+</body>
+</html>
+

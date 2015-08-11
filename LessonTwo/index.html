@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>Angular 2</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<input ng-init="name = 'Bojack'" ng-model="name" type="text" placeholder="What is your name">
+<h1>My name is: {{name}}</h1>
+</body>
+</html>
+
+<!-- Questions
+
+1) What does ng-model do?
+ng-model binds the view into the model. It gives you the controller for the ngModel directive. Allows you to get input and text area information. 
+
+2) What is "dirty checking"? (Digest Cycle)
+Dirty checking allows for Angular to watch for variables that may or may ot exist. It watches for when a variable changes. Scans the scope for changes. Takes a while (slow).
+
+3) Find a way to set the initial value of "name" as "BoJack"(without writing a controller).
+Use ng-init. See index.html
+
+4) What are those {{ }} expressions? Are they Handlebars?
+Markup. They are to bind expressions to elements. (Expression Binding)
+
+5) Explain what 2-way data binding is.
+It produces a "live view". Continually updating the page. Any changes made on the view are immediately reflected in the model and vice versa.
+
+6) BONUS: Research the $digest loop
+Digest cylcle. Relates to the idea of dirty checking. Code that runs inside the Angular event loop.
+  -->

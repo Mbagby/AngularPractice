@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app ="firstApp">
+<head>
+	<title>Angular 4</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+
+
+
+<div ng-controller="MyFirstController">
+        <input ng-model="name" type="text" placeholder="What is your name">
+        <h1>My name is: {{name}}</h1>
+</div>
+
+<div ng-controller="ExercisesController">
+        <h1>My favorite color is: {{favColor}}</h1>
+        <h3>There are {{secondsInACentury | number}} seconds in a century.</h3>
+        <h2>{{rightNow | date}}</h2>
+</div>
+
+
+</body>
+</html>
+
+
+<!-- Questions
+
+1) What are Angular modules? Why use them?
+A container for the different parts of your app. (Controllers, services, filters, etc.) Angular apps don't have a main method. Modules specify how an application should be bootstrapped. Why? Easier to understand. Package code as reusable modules. Can be loaded in any order. Unit tests are faster b/c they only load relevant modules. End to end tests can use modules to override configuration.
+
+2) What the hell is $scope? It is an execution context for expressions. They copy the DOM sturcture of the application. It is an object that refers to the application model.
+
+3) What are Angular modules? See Question 1
+
+4) Why do we pass in $scope as an argument to controller functions? Because the $scope allows us to use that information in our view. Makes it automatically avialble in our view.
+
+-->

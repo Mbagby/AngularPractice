@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>Angular 3</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+1 + 2 = {{1 + 2}} <br>
+My name is {{"BoJack" + " Horseman"}} <br>
+The array [99,43,22] is {{ [99,43,22].length }} items long. <br>
+Price: {{3.14159265359 | currency  : "&euro;"}}<br>
+
+</body>
+</html>
+
+<!-- Questions
+
+Exercise: JavaScript expressions are evaluated against the global window. In Angular, expressions are evaluated against a scope object. 
+
+1) What are Angular expressions? How do they compare to EJS/ERB tags? The are evaluated against scope opjects. Javascript like snipits placed in bindings. You cannot write loops or if/else statements like you can with EJS and ERB tags.
+
+2) What happens when you write invalid code in an expression? What type of error do you get?
+You wil get back NaN.
+
+3) What are Angular filters? Name 4 built-in filters, including one that we haven't used yet.
+Filters format the value of an expression to display.
+(currency, number, json, date, lower and uppercase, limitTo, orderBy)
+
+4) We'll soon see how to create custom filters. What is a use case for a custom filter? 
+One case on the Angular docs is to decorate a specific expression output. Or to even reverse a word.
+-->
