@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="lessonFive">
+<head>
+	<title>Angular 2</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="app.js"></script>
+
+</head>
+<body>
+
+<div ng-controller="people" >
+   <ul>
+        <li ng-repeat="name in names">
+            {{name}}
+         </li>
+    </ul>
+     <ul>
+        <li ng-repeat="symbol in symbols">
+            {{symbol}}
+         </li>
+    </ul>
+    <ul>
+        <li ng-repeat="duplicate in duplicates track by $index">
+            {{duplicate}}
+         </li>
+    </ul>
+
+</div>
+
+</body>
+</html>
+
+
+<!-- Questions:
+
+1) Why use ng-src and ng-href? 
+
+2) What are directives?
+Directives are Angular's way of extending HTML. It add extra functionality onto html elements and attributes.
+
+3) Does ng-class require an object to be passed in?
+
+4) What order does an ng-repeat display items in? From beginning to end.
+
+5) How does ng-repeat handle duplicate data? It does not repeat duplicate data. It refuses to do anything with said data. Throws a fit so you cannot figure out why it isnt working. 
+
+6) Three built in directive so far. 
+ng-init, ng-model, ng-controller -->

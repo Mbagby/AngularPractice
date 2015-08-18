@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app= "pingPong">
+<head>
+	<title>Angular 6 Ping Pong</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class = "container">
+<h1 class= "title">Ping Pong Score Keeper</h1>
+
+<div ng-controller="scoreKeeper">
+    <div ng-class="{green: playerOne > 10}"ng-click= "addPointPlayerOne()" class ="sides">
+    	<h1>Player One</h1>
+
+    	<div>
+    		<h2> {{playerOne}}</h2>
+  		</div>
+
+  		<div ng-show = "points % 2 ==! 0">
+  			<h3> Serving </h3>
+  		</div>
+    </div>
+
+    <div ng-class = "{green: playerTwo > 10}" ng-click= "addPointPlayerTwo()" class ="sides">
+    	<h1>Player Two</h1>
+
+    	<div >
+    		<h2> {{playerTwo}}</h2>
+  		</div>
+
+  		<div ng-show = "points % 2 === 0">
+  			<h3> Serving </h3>
+  		</div>
+    </div>
+    <button ng-click="reset()"> Reset</button>
+
+</div>
+</div>
+
+
+
+</body>
+</html>

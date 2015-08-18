@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app= "appOne">
+<head>
+	<title>Angular 5 Password</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Signup Page</h1>
+
+<div ng-controller="signUp">
+
+	<input ng-model="password" type="text" placeholder= "password">
+
+	<div ng-hide="password.length < 6">
+		<h3 ng-class="{green: password.length >= 6}"> Your password is {{password.length}} characters </h3>
+    	<button type="submit">
+    		Sign Up!
+    	</button>
+    </div>
+
+    <div ng-show="password.length < 6">
+    	<h3 ng-class="{red: password.length < 6}"> Your password is {{password.length}} characters </h3>
+        <h3> Your password must be longer than 5 characters!</h3>
+ 	</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app= "app">
+<head>
+	<title>Angular 5 CameraShop</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Camera Shop</h1>
+
+<select ng-model="option" name="option" id="">
+           <option value="rating">rating</option>
+           <option value="price">price</option>
+</select>
+
+    <div ng-hide="option == 'rating' || option == 'price'">
+          <ul ng-controller="cameraShop">
+              <li ng-repeat="camera in cameras | orderBy:'title'">
+                  <ul>{{camera.title}}</ul>
+                  <ul ng-show='camera.onSale' class='orange'>Price: {{camera.price | currency}} On Sale Now!</ul>
+                  <ul ng-show='!camera.onSale'>Price: {{camera.price | currency}}</ul>
+                  <ul ng-class="{green: camera.rating > 2, red: camera.rating <= 2}">Rating: {{camera.rating}}</ul>
+                  <img ng-src="{{camera.image}}">
+              </li>
+          </ul>
+      </div>
+      <div ng-show="option == 'rating'">
+          <ul ng-controller="cameraShop">
+              <li ng-repeat="camera in cameras | orderBy:'-rating'">
+                  <ul>{{camera.title}}</ul>
+                  <ul ng-show='camera.onSale' class='orange'>Price: {{camera.price | currency}} On Sale Now!</ul>
+                  <ul ng-show='!camera.onSale'>Price: {{camera.price | currency}}</ul>
+                  <ul ng-class="{green: camera.rating > 2, red: camera.rating <= 2}">Rating: {{camera.rating}}</ul>
+                  <img ng-src="{{camera.image}}">
+              </li> 
+          </ul>
+      </div>
+      <div ng-show="option == 'price'">
+          <ul ng-controller="cameraShop">
+              <li ng-repeat="camera in cameras | orderBy:'price'">
+                  <ul>{{camera.title}}</ul>
+                  <ul ng-show='camera.onSale' class='orange'>Price: {{camera.price | currency}} On Sale Now!</ul>
+                  <ul ng-show='!camera.onSale'>Price: {{camera.price | currency}}</ul>
+                  <ul ng-class= "{green: camera.rating > 2, red: camera.rating <= 2}">Rating: {{camera.rating}}</ul>
+                  <img ng-src="{{camera.image}}">
+              </li>
+          </ul>
+      </div>
+
+<!-- 
+<div ng-controller="cameraeraShop">
+   <ul>
+        <li ng-repeat="camera in cameras">
+            <ul>{{camera.title}}</ul>
+            <img ng-src="{{camera.image}}" alt="Description" height="100px" />
+            <ul>{{camera.rating}}</ul>
+            <ul>{{camera.price | currency}}</ul>
+         </li>
+    </ul>
+</div> -->
+
+</body>
+</html>

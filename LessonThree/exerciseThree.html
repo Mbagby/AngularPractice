@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html ng-app>
 <head>
-	<title>Angular 3 Exercise 2</title>
+	<title>Angular 3 Exercise 3</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
 	<script src="jquery-1.11.3.min.js"></script>
 </head>
 <body>
 
 How much did your meal cost?
-<input ng-model="mealCost" type="integer" placeholder="$">
+<input ng-model="mealCost" type="text" placeholder="$">
 <br>
 How much do you want to tip?
 <select ng-model="tipPercentage">
@@ -20,7 +20,7 @@ How much do you want to tip?
 
 <h3>Subtotal: {{mealCost | currency}}</h3>
 <h3>Tip: {{mealCost * tipPercentage | currency}}</h3>
-
+<!-- <h3>Total: {{(0.0 + mealCost + (mealCost * tipPercentage)) | number}}</h3> -->
 </body>
 </html>
 

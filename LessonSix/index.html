@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app= "lessonSix">
+<head>
+	<title>Angular 6 Events</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Events</h1>
+
+<div ng-controller="controllerSix">
+    <button ng-click="pickRandomNumber()">Pick Random Number</button>
+    <h3>The number is: {{number}}</h3>
+    <input ng-model="word" type="text">
+    <button ng-click="wordReverser()">Reverse</button>
+    <h3>Your word is: {{word}}</h3>
+    <h3>Your word reversed is: {{reversedWord}}</h3>
+</div>
+
+</body>
+</html>
